@@ -1,0 +1,3 @@
+select Ranking, SongTitle, Album, Label from BestSongsEver order by Ranking;
+select Ranking, SongTitle, Year, Name, NumberOfMembers, CurrentlyActive from (BestSongsEver natural join Artists) where CurrentlyActive = 1 and Artists.NumberOfMembers>1 order by Year desc;
+select distinct(Language) from ((Languages natural join BestSongsEver) natural join Artists) where Languages.Ranking=BestSongsEver.Ranking and BestSongsEver.Name=Artists.Name and Artists.CurrentlyActive=0 order by Language;

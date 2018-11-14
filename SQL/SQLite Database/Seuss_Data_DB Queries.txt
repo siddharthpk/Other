@@ -1,0 +1,142 @@
+-- q1.sql
+
+-- CSC 106 - Spring 2016
+
+--
+-- Use the command '.read Seuss_Data.sql' in sqlite3 to import the 
+
+-- schema and data below.It is normal for errors to be reported on lines 10, 11, and 12.
+
+--
+-- 
+Ariel Webster - 03/02/2016
+
+
+-- 
+
+If the tables already exist, delete them --
+
+drop table Artists;
+
+drop table BestSongsEver;
+
+drop table Languages;
+
+
+-----------------------
+
+-- Create the tables --
+
+-----------------------
+
+create table Artists( Name text, NumberOfMembers int, CurrentlyActive int);
+
+create table BestSongsEver( Name int, SongTitle text, Year int, Ranking int, Genre text, Album text, Record_Label text);
+
+create table Languages( Ranking int, Language text);
+
+
+---------------------------------
+
+--Insert data into each table--
+
+---------------------------------
+
+insert into BestSongsEver values('Zayn Malik', 'Dusk Till Dawn', 2017, 5, 'Pop', 'Dusk Till Dawn', 'RCA');
+
+insert into BestSongsEver values('Eminem', 'Monster', 2013, 6, 'Hip hop', 'The Marshall Mathers LP 2', 'Shady');
+
+insert into BestSongsEver values('Luis Fonsi', 'Despacito', 2017, 3, 'Latin Pop', 'None',' Universal Latin');
+
+insert into BestSongsEver values('Shakira', 'Perro Fiel', 2017, 14, 'Latin Pop Pop', 'El Dorado', 'Ace Entertainment');
+
+insert into BestSongsEver values('Queen', 'Bohemian Rhapsody', 1975, 7, 'Progressive Rock', 'A Night at the Opera', 'EMI');
+
+insert into BestSongsEver values('Fifth Harmony',' Work From Home', 2016, 8, 'Dance Pop', '7/27', 'Sony');
+
+insert into BestSongsEver values('Nirvana', 'Smells Like Teen Spirit', 1991, 10, 'Grunge', 'Nevermind', 'DGC');
+
+insert into BestSongsEver values('The Beatles', 'Hey Jude', 1968, 12, 'Rock', 'None', 'Apple');
+
+insert into BestSongsEver values('Shakira', 'Chantaje', 2016, 13, 'Pop', 'El Dorado', 'Ace Entertainment');
+
+insert into BestSongsEver values('The Beatles', 'I want to Hold Your Hand', 1963, 15, 'Pop', 'Meet the Beatles', 'Parlophone');
+
+insert into BestSongsEver values('John Lennon', 'Imagine', 1971, 9, 'Soft Rock', 'Imagine', 'Apple');
+
+insert into BestSongsEver values('Selena Gomez', 'It Aint Me', 2017, 1, 'Dance-Pop', 'Stargazing', 'Sony');
+
+insert into BestSongsEver values('Selena Gomez', 'Fetish', 2017, 4, 'Alt Pop', 'None', 'Interscope');
+
+insert into BestSongsEver values('Selena Gomez', 'Come and Get It', 2013, 2 , 'ElectroPop', 'Stars Dance', 'Hollywood');
+
+insert into BestSongsEver values('Luis Fonsi', 'Aqui Estoy Yo', 2008, 11, 'Latin Pop', 'Palabras del Selencio', 'Universal Music Latino');
+
+
+
+
+insert into Artists values('Zayn Malik', 1, 1);
+
+insert into Artists values('Eminem', 1, 1);
+
+insert into Artists values('Luis Fonsi', 1, 1);
+
+insert into Artists values('Shakira', 1, 1);
+
+insert into Artists values('Queen', 2, 1);
+
+insert into Artists values('Fifth Harmony', 5, 4);
+
+insert into Artists values('Nirvana', 3, 0);
+
+insert into Artists values('The Beatles', 4, 0);
+
+insert into Artists values('John Lennon', 1, 0);
+
+insert into Artists values('Selena Gomez', 1, 1);
+
+
+
+
+insert into Languages values(5, 'English');
+
+insert into Languages values(6, 'English');
+
+insert into Languages values(3, 'Spanish');
+
+insert into Languages values(3, 'English');
+
+insert into Languages values(3, 'Portugese');
+
+insert into Languages values(11,'Spanish');
+
+insert into Languages values(1, 'English');
+
+insert into Languages values(2, 'English');
+
+insert into Languages values(4, 'English');
+
+insert into Languages values(7, 'English');
+
+insert into Languages values(8, 'English');
+
+insert into Languages values(9, 'English');
+
+insert into Languages values(10,'English');
+
+insert into Languages values(12, 'English');
+
+insert into Languages values(13, 'Spanish');
+
+insert into Languages values(14, 'Spanish');
+
+insert into Languages values(15, 'English');
+
+
+
+
+.mode column
+
+.header on
+
+select * from characters;

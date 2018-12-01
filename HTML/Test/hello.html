@@ -27,6 +27,24 @@ a{
 </style>
 </head>
 <body>
+
+
+<!-- Load TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://unpkg.com/@tensorflow-models/posenet">
+    </script>
+    <script type="text/javascript">
+      posenet.load().then(function(net) {
+        const imageScaleFactor = 0.50;
+		const flipHorizontal = false;
+		const outputStride = 16;
+		const imageElement = document.getElementById('cat');
+		// load the posenet model
+		const net = await posenet.load();
+		const pose = await net.estimateSinglePose(imageElement, scaleFactor, flipHorizontal, outputStride);
+      });
+    </script>
 <ul>
   <li><a href="https://www.uvic.ca/mypage">MyPage</a></li>
   <li><a href="https://learninginmotion.uvic.ca">LIM</a></li>
